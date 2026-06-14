@@ -7,5 +7,6 @@ class User < ApplicationRecord
                       with: URI::MailTo::EMAIL_REGEXP,
                       message: "is invalid"
                     }
+  validates :address, presence: true
   validates :phone_number, presence: true
 end
